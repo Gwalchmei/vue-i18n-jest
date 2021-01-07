@@ -1,24 +1,17 @@
 # i18n-jest
 
-## Project setup
+Mini project to test an issue with date formatting in Jest tests.
+
+The issue is linked to the node version
+
+### Launch the tests in an environment with the latest node version
+
 ```
-yarn install
+$ docker build -t i18n-jest-success -f Dockerfile.success . && docker run i18n-jest-success
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+### Launch the tests in an environment with node v12.8.4
 
-### Compiles and minifies for production
 ```
-yarn build
+$ docker build -t i18n-jest-fail -f Dockerfile.fail . && docker run i18n-jest-fail
 ```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
